@@ -1,0 +1,34 @@
+
+.home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url('https://i.pinimg.com/736x/40/07/10/4007102c8873d11ab3e57cec889c6b15.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-background {
+  /* position: absolute; */
+  /* top: 0;
+  left: 0; */
+  /* height: 100%;
+  width: 100%; */
+  /* background: rgba(0, 0, 0, 0.5); dark overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+
+   /* display: flex; */
+  flex-wrap: wrap;
+  gap: 12px;
+  /* justify-content: center;
+  align-items: center; */
+  /* padding: 1rem; */
+  background: rgba(229, 228, 226, 1);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
