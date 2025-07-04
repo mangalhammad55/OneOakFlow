@@ -1,0 +1,25 @@
+.country-detail-container {
+  padding: 2rem;
+  background: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  margin: auto;
+  margin-top: 1.5rem;
+}
+
+.country-detail-container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.detail-grid p {
+  margin: 0;
+}

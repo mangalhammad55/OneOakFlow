@@ -1,5 +1,6 @@
-1. Setup MongoDB in local pointing to port 27017 otherwise update the MongoURL in .env file.
-2. Run "node scripts/populate.js" inside ./server/ nodejs application to populate the data in mongoDB.
-3. Run "npm i" in both client and server applications.
+## 🛠️ Setup Instructions
+1. Setup MongoDB in local pointing to port 27017 otherwise update the MongoURL in .env file for the backend server application.
+2. Run "npm i" in both client and server applications.
+3. Run "node scripts/populate.js" inside ./server/ nodejs application to populate the data in mongoDB.
 4. Start nodejs server "node server.js".
 5. Start React application with "npm start".

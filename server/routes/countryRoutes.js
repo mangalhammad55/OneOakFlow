@@ -5,6 +5,7 @@ const Fuse = require('fuse.js');
 const axios = require('axios');
 
 router.get('/search', async (req, res) => {
+  console.log('Search endpoint hit');
   const { name, continent, sortBy, page = 1, limit = 10 } = req.query;
   let filter = {};
   if (continent) filter.continent = continent;
@@ -24,6 +25,25 @@ router.get('/search', async (req, res) => {
   res.json({ results: paginated, total: countries.length });
 });
 
+
+router.get('/suggestions', async (req, res) => {
+  console.log('Suggestions endpoint hit');
+  try {
+    const { name } = req.query;
+    if (!name) return res.status(400).json({ error: 'Name query is required' });
+
+    const countries = await Country.find({
+      name: { $regex: name, $options: 'i' }
+    }).limit(10);
+
+    const names = countries.map(c => c.name); 
+    res.json(names);
+  } catch (err) {
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+
 router.get('/:code', async (req, res) => {
   try {
     const { code } = req.params;
@@ -33,5 +53,7 @@ router.get('/:code', async (req, res) => {
     res.status(500).json({ error: 'Country not found' });
   }
 });
+
+
 
 module.exports = router;

@@ -12,6 +12,6 @@ export default function App() {
         <Route path="/search" element={<SearchResults />} />
         <Route path="/country/:code" element={<CountryDetail />} />
       </Routes>
-    </Router>
+    </Router> 
   );
 }

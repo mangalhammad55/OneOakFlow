@@ -12,7 +12,6 @@ dotenv.config();
       useUnifiedTopology: true
     });
 
-    // const { data } = await axios.get('https://restcountries.com/v3.1/all');
     const { data } = await axios.get('https://restcountries.com/v3.1/all?fields=name,capital,region,currencies,flag,cca2');
 
     const formatted = data.map(c => ({
@@ -26,7 +25,7 @@ dotenv.config();
 
     await Country.deleteMany({});
     await Country.insertMany(formatted);
-    console.log('DB populated successfully.');
+    console.log('DB populated successfuly.');
     process.exit();
   } catch (err) {
     console.error('Failed to populate DB:', err);
